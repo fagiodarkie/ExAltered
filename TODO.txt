@@ -1,0 +1,23 @@
+Character Management
+	Implement minor features (size, ...)
+	
+GUI Functionalities
+	Design & Implement new tabs
+		Pools
+			experience
+		Combat
+			Moves (with effects on character stats)
+			active effects
+	Add a wizard to resolve physical / social attacks
+	Add a wizard to create new character
+		
+Secondary Character Management
+	Implement Charms
+		Implement Charms library
+		Implement Charms Save
+	
+Secondary Tab Implementation:	
+	Charms & Combos
+	Background
+
+	

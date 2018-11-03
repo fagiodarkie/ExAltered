@@ -124,6 +124,7 @@ public class TempEffect {
 		if (index < generalPenaltyNumber()) return generalPenaltyName[index];
 		index -= generalPenaltyNumber();
 		return soakPenaltyName[index];*/
+		return null;
 	}
 	
 	public static String[] getBonusNameList() {

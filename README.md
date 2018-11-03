@@ -1,6 +1,10 @@
 # ExAltered
 Interactive Character sheet for a heavily altered version of the White Wolf Publishing RPG Exalted (version 2.0)
 
+## Continuous Integration Server
+ExAltered is developed under Continuous Integration provided by BuddyWorks.
+Check the status of the latest commit here: https://app.buddy.works/fagiodarkie/exaltered/pipelines
+
 ## Intellectual property and rights management
 Please note that the distributed software is licensed with GNU General Public License 3.0.
 The intellectual property of the software and all its parts belongs to the contributors.

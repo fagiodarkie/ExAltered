@@ -22,9 +22,17 @@ public class HealthPenalty {
 
     private void init(double bruisedThreshold, double dyingThreshold, int bruisedPenalty, int dyingPenalty)
     {
-        if ((bruisedThreshold > dyingThreshold)
+        if ((bruisedThreshold < 0)
+                || (dyingThreshold < 0))
+            throw new IllegalArgumentException("provided senseless arguments: thresholds are negative!");
+
+        if ((bruisedThreshold < dyingThreshold)
             || (bruisedPenalty > dyingPenalty))
-            throw new IllegalArgumentException("provided senseless arguments: bruised parameters higher than dying arguments!");
+            throw new IllegalArgumentException("provided senseless arguments: bruised parameters stricter than dying arguments!");
+
+        if ((bruisedThreshold >= 1)
+            || (dyingThreshold >= 1))
+            throw new IllegalArgumentException("provided senseless arguments: thresholds over 100%!");
 
         this.bruisedPenalty = bruisedPenalty;
         this.bruisedThreshold = bruisedThreshold;

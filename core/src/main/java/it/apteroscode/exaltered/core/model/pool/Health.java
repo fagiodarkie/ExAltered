@@ -26,40 +26,52 @@ registered trademarks of White Wolf Entertainment AB.
 All rights reserved. www.white-wolf.com
 */
 
-package it.apteroscode.exaltered.core.model.character;
+package it.apteroscode.exaltered.core.model.pool;
 
-public class Background {
+public class Health {
+	private Double maxHealth, currentHealth;
 
-	private String name;
-	private String description;
-	private int degree;
-	
-	public Background() {
-		degree = 0;
-	}
-	
-	public String getName() {
-		return name;
+	public Health(double maxHealth)
+	{
+		updateMaxAndCurrent(maxHealth, maxHealth);
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public Health(double maxHealth, double currentHealth)
+	{
+		updateMaxAndCurrent(maxHealth, currentHealth);
 	}
 
-	public String getDescription() {
-		return description;
+	public void updateMaxAndCurrent(double maxHealth, double currentHealth)
+	{
+		this.maxHealth = maxHealth;
+		this.currentHealth = currentHealth;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void damage(double amount)
+	{
+		changeHealth(-amount);
 	}
 
-	public int getDegree() {
-		return degree;
+	public void cure(double amount)
+	{
+		changeHealth(amount);
 	}
 
-	public void setDegree(int degree) {
-		this.degree = degree;
+	private void changeHealth(double amount)
+	{
+		currentHealth += amount;
+		if (currentHealth < 0D)
+			currentHealth = 0D;
+
+		if (currentHealth > maxHealth)
+			currentHealth = maxHealth;
 	}
-	
+
+	public Double getCurrentHealth() {
+		return currentHealth;
+	}
+
+	public Double getMaxHealth() {
+		return maxHealth;
+	}
 }

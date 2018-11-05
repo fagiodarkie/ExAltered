@@ -41,10 +41,6 @@ public class Minimum {
 		setValue(v);
 	}
 	
-	public Minimum(String s) {
-		fromString(s);
-	}
-	
 	public Minimum() {
 		value = stat = 0;
 	}
@@ -73,21 +69,6 @@ public class Minimum {
 	
 	public boolean equals(Minimum m) {
 		return (stat == m.stat) && (value == m.value);
-	}
-	
-	public void fromString(String s) {
-		String[] r = s.split("\\.");
-		setStat(Short.parseShort(r[0]));
-		setValue(Short.parseShort(r[1]));
-	}
-	
-	public String toString() {
-		return getStat() + "." + getValue();
-	}
-	
-	public static Minimum factoryFromString(String s) {
-		Minimum m = new Minimum(s);
-		return m;
 	}
 
 	public short getValue() {

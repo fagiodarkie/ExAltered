@@ -3,13 +3,13 @@ package it.apteroscode.exaltered.core.model.experience;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ExperienceManagementSet {
+public class ExperienceManagement {
 
     private List<GameSessionExperience> playedSessions;
     private List<ExperienceLogEntry> expenses;
 
-    public ExperienceManagementSet(List<GameSessionExperience> sessions,
-                                   List<ExperienceLogEntry> expenses)
+    public ExperienceManagement(List<GameSessionExperience> sessions,
+                                List<ExperienceLogEntry> expenses)
     {
         this.playedSessions = sessions;
         this.expenses = expenses;

@@ -33,12 +33,13 @@ package it.apteroscode.exaltered.core.model.character;
 
 import it.apteroscode.exaltered.core.model.character.ability.AbilitySet;
 import it.apteroscode.exaltered.core.model.character.attribute.AttributeSet;
+import it.apteroscode.exaltered.core.model.experience.ExperienceManagement;
 
 
 public class PlayCharacter {
 
 	public AttributeSet attributes;
 	public AbilitySet abilities;
-
+	public ExperienceManagement experience;
 
 }

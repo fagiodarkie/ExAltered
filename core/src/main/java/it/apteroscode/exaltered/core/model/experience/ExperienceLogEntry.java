@@ -30,35 +30,24 @@ package it.apteroscode.exaltered.core.model.experience;
 
 public class ExperienceLogEntry {
 
-	private short amount;
+	private Double amount;
 	private String description;
 	
-	public ExperienceLogEntry(short a, String d) {
+	public ExperienceLogEntry(double a, String d) {
 		amount = a;
 		description = d;
 	}
 
 	public ExperienceLogEntry() {	}
 
-	public String toString() {
-		return "" + amount + ":-:" + description;
-	}
-	
-	public void fromString(String s) {
-		if (s.equalsIgnoreCase("")) return;
-		String[] r = s.trim().split(":-:");
-		description = r[1];
-		amount = Short.parseShort(r[0]);
-	}
-	
 	public boolean isExpense() {
 		return amount < 0;
 	}
 	
-	public short getAmount() {
+	public Double getAmount() {
 		return amount;
 	}
-	public void setAmount(short amount) {
+	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
 	public String getDescription() {

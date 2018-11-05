@@ -1,4 +1,7 @@
 # ExAltered
+
+![alt text](https://app.buddy.works/fagiodarkie/exaltered/pipelines/pipeline/158638/badge.svg?token=4cabeb6b5da66f96de7538cad958cb32020e5b3507acbc846e40a69ad62af91c)
+
 Interactive Character sheet for a heavily altered version of the White Wolf Publishing RPG Exalted (version 2.0)
 
 ## Continuous Integration Server

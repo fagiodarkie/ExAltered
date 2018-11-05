@@ -29,46 +29,40 @@ All rights reserved. www.white-wolf.com
 package it.apteroscode.exaltered.core.model.pool;
 
 public class Health {
-	private Double maxHealth, currentHealth;
+	private Double maxHealth, damage;
 
 	public Health(double maxHealth)
 	{
-		updateMaxAndCurrent(maxHealth, maxHealth);
+		updateMaxAndCurrent(maxHealth, 0);
 	}
 
-	public Health(double maxHealth, double currentHealth)
+	public Health(double maxHealth, double damage)
 	{
-		updateMaxAndCurrent(maxHealth, currentHealth);
+		updateMaxAndCurrent(maxHealth, damage);
 	}
 
-	public void updateMaxAndCurrent(double maxHealth, double currentHealth)
+	public void updateMaxAndCurrent(double maxHealth, double damage)
 	{
 		this.maxHealth = maxHealth;
-		this.currentHealth = currentHealth;
+		this.damage = damage;
 	}
 
 	public void damage(double amount)
 	{
-		changeHealth(-amount);
+		damage += amount;
+		if (damage > maxHealth)
+			damage = maxHealth;
 	}
 
 	public void cure(double amount)
 	{
-		changeHealth(amount);
-	}
-
-	private void changeHealth(double amount)
-	{
-		currentHealth += amount;
-		if (currentHealth < 0D)
-			currentHealth = 0D;
-
-		if (currentHealth > maxHealth)
-			currentHealth = maxHealth;
+		damage -= amount;
+		if (damage < 0D)
+			damage = 0D;
 	}
 
 	public Double getCurrentHealth() {
-		return currentHealth;
+		return maxHealth - damage;
 	}
 
 	public Double getMaxHealth() {

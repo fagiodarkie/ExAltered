@@ -37,7 +37,8 @@ import it.apteroscode.exaltered.core.model.character.attribute.AttributeSet;
 
 public class PlayCharacter {
 
-	public AttributeSet atts;
-	public AbilitySet abils;
+	public AttributeSet attributes;
+	public AbilitySet abilities;
+
 
 }

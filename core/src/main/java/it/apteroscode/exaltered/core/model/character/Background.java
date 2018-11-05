@@ -37,6 +37,13 @@ public class Background {
 	public Background() {
 		degree = 0;
 	}
+
+	public Background(String name, int degree, String description)
+	{
+		this.description = description != null ? description : "";
+		this.degree = degree;
+		this.name = name;
+	}
 	
 	public String getName() {
 		return name;

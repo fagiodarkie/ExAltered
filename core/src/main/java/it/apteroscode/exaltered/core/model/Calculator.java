@@ -59,7 +59,6 @@ public class Calculator {
 //
 //		int res = 0;
 //
-//		Minimum[] m = c.equip.weapon.get(c.equip.equippedWeapon.get(weaponIndex)).getMinimums();
 //		for (int i = 0; i < m.length; ++i) {
 //			int ab = m[i].getStat();
 //			short val = 0;
